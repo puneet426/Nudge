@@ -14,6 +14,7 @@ import { Button } from './button';
 import { createCollection } from '@/actions/collection';
 import { toast } from 'sonner';
 import { ReloadIcon } from '@radix-ui/react-icons';
+import { useRouter } from 'next/navigation';
 
 
 
@@ -25,9 +26,11 @@ interface Props{
 
 
 function CreateCollectionSheet({open, onOpenChange}:Props) {
+    const router = useRouter();
     const form = useForm<createCollectionSchemaType>({
         defaultValues:{},
         resolver: zodResolver(createCollectionSchema),
+        
     })
    
 
@@ -40,6 +43,7 @@ function CreateCollectionSheet({open, onOpenChange}:Props) {
              toast("Success", {
               description: "Collection created successfully",
                })
+               router.refresh();
        }catch (e) {
   const message = e instanceof Error ? e.message : "Something went wrong.";
   toast("Error", {
