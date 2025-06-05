@@ -51,12 +51,12 @@ function CreateTaskDialog({open,collection,setOpen}:Props) {
                  
                 
         }catch(e){
-            toast("Error", {
-            description: "Cannot delete collection",
-            
-            
-
-         })
+                const message = e instanceof Error ? e.message : "Cannot delete collection";
+                toast("Error", {
+                    description:message,
+                    
+        
+                 })
         }
     }
 

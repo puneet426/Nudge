@@ -14,7 +14,7 @@ import { Button } from './button';
 import { createCollection } from '@/actions/collection';
 import { toast } from 'sonner';
 import { ReloadIcon } from '@radix-ui/react-icons';
-import { Toaster } from './sonner';
+
 
 
 interface Props{
@@ -40,13 +40,11 @@ function CreateCollectionSheet({open, onOpenChange}:Props) {
              toast("Success", {
               description: "Collection created successfully",
                })
-       }catch(e:any){
-            // show toast
-            toast("Error", {
-            description: "Something went wrong.",
-            
-            
-     });
+       }catch (e) {
+  const message = e instanceof Error ? e.message : "Something went wrong.";
+  toast("Error", {
+    description: message,
+  });
      console.log("Error while creating collection",e);
        }
     };

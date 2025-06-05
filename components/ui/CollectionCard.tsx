@@ -45,8 +45,9 @@ const removeCollection = async () => {
          });
          router.refresh();
     }catch(e){
+        const message = e instanceof Error ? e.message : "Cannot delete collection";
         toast("Error", {
-            description: "Cannot delete collection",
+            description:message,
             
 
          })

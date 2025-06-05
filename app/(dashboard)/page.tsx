@@ -4,7 +4,7 @@ import CollectionCard from "@/components/ui/CollectionCard";
 import CreateCollectionBtn from "@/components/ui/CreateCollectionBtn";
 import { Skeleton } from "@/components/ui/skeleton";
 import {prisma } from "@/lib/prisma";
-import { wait } from "@/lib/wait";
+
 import { currentUser } from "@clerk/nextjs/server"
 import { Prisma } from "@prisma/client";
 import { Suspense } from "react";
