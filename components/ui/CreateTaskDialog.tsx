@@ -17,6 +17,7 @@ import { CalendarIcon, ReloadIcon } from '@radix-ui/react-icons';
 import { format } from 'date-fns';
 import { createTask } from '@/actions/task';
 import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
 
 
 
@@ -27,6 +28,7 @@ interface Props{
 }
 
 function CreateTaskDialog({open,collection,setOpen}:Props) {
+    const router = useRouter();
     const form = useForm<createTaskSchemaType>({
         resolver: zodResolver(createTaskSchema),
         defaultValues:{
@@ -45,13 +47,13 @@ function CreateTaskDialog({open,collection,setOpen}:Props) {
         try{
             await createTask(data);
             toast("Success", {
-                description: "Collection deleted successfully",
+                description: "Collection created successfully",
                 });
                 onOpenChangeWrapper(false);
-                 
+                 router.refresh();
                 
         }catch(e){
-                const message = e instanceof Error ? e.message : "Cannot delete collection";
+                const message = e instanceof Error ? e.message : "Cannot create collection";
                 toast("Error", {
                     description:message,
                     
