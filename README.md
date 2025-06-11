@@ -6,6 +6,8 @@
 ## Overview
 ![Project Demo](/public/over.png)
 
+---
+
 ## 🌐 Live Demo
 
 🚀 **Live Demo**(https://nudge-beryl.vercel.app/)
