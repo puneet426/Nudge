@@ -3,10 +3,12 @@
 **Nudge** is a productivity-focused reminder application built with **Next.js** that helps users stay consistent and accountable through gentle nudges and clean design. It enables users to set tasks, receive reminders, and boost daily focus — all in one sleek interface.
 
 ---
+## Overview
+![Project Demo](/public/over.png)
 
 ## 🌐 Live Demo
 
-👉 [Visit the App](https://nudge-beryl.vercel.app/)
+🚀 **Live Demo**(https://nudge-beryl.vercel.app/)
 
 ---
 
