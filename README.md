@@ -10,7 +10,7 @@
 
 ## 🌐 Live Demo
 
-🚀 **Live Demo**(https://nudge-beryl.vercel.app/)
+🚀 **[Live Demo](https://nudge-beryl.vercel.app/)**
 
 ---
 
