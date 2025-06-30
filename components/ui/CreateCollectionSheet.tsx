@@ -114,7 +114,7 @@ function CreateCollectionSheet({open, onOpenChange}:Props) {
             </Form>
             <div className='flex flex-col gap-3 mt-4'>
                 <Separator/>
-            <Button disabled={form.formState.isSubmitting} variant={"outline"} className={cn( `text-white`, CollectionColors[form.watch("color") as CollectionColor ])} onClick={form.handleSubmit(onSubmit)}>Confirm {form.formState.isSubmitting && (<ReloadIcon className='ml-2 h-4 w-4 animate-spin'/>) } </Button>
+            <Button disabled={form.formState.isSubmitting} variant={"outline"} className={cn( `text-black`, CollectionColors[form.watch("color") as CollectionColor ])} onClick={form.handleSubmit(onSubmit)}>Confirm {form.formState.isSubmitting && (<ReloadIcon className='ml-2 h-4 w-4 animate-spin'/>) } </Button>
             </div>
            </div>
         </SheetContent>
