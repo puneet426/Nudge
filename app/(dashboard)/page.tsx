@@ -72,7 +72,7 @@ async function CollectionList(){
       <Alert>
     <SadFace/>
       <AlertTitle>There are no collections yet!</AlertTitle>
-      <AlertDescription>Create a collection to get satrted</AlertDescription>
+      <AlertDescription>Create a collection to get started</AlertDescription>
     </Alert>
     <CreateCollectionBtn/>
     </div>
